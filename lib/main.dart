@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sompay_app/splash.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+
+import 'homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,30 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WebViewPage(),
-    );
-  }
-}
-
-class WebViewPage extends StatefulWidget {
-  @override
-  _WebViewPageState createState() => _WebViewPageState();
-}
-
-class _WebViewPageState extends State<WebViewPage> {
-  final String initialUrl =
-      'https://account.sompay.so/client'; // Replace with your desired URL
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('WebView Page'),
+      debugShowCheckedModeBanner: false,
+      title: 'Sompay',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      body: WebView(
-        initialUrl: 'https://account.sompay.so/client',
-        javascriptMode: JavascriptMode.unrestricted,
-      ),
+      home: SplashScreen(),
     );
   }
 }
