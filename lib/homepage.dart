@@ -47,16 +47,16 @@ class _WebViewPageState extends State<WebViewPage> {
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
 
-          leading: InkWell(
-            onTap: () async {
-              if (await webviewController.canGoBack()) {
-                webviewController.goBack();
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            child: Icon(Icons.arrow_back_ios),
-          ),
+          // leading: InkWell(
+          //   onTap: () async {
+          //     if (await webviewController.canGoBack()) {
+          //       webviewController.goBack();
+          //     } else {
+          //       Navigator.pop(context);
+          //     }
+          //   },
+          //   child: Icon(Icons.arrow_back_ios),
+          // ),
           // leading: IconButton(
           //   icon: Icon(Icons.arrow_back),
           //   onPressed: () {
